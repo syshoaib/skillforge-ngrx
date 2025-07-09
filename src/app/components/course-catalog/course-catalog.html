@@ -1,0 +1,33 @@
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px">
+  <mat-card *ngFor="let course of courses$ | async">
+    <mat-card-title>{{ course.title }}</mat-card-title>
+    <mat-card-content>
+      <p>Enrolled: {{ course.totalEnrolled }}</p>
+      <p>Rating: {{ course.rating | number: '1.1-2' }}</p>
+      <h4>Reviews</h4>
+      <mat-list>
+        <mat-list-item *ngFor="let review of course.reviews">
+          {{ review.review }}
+        </mat-list-item>
+      </mat-list>
+      <h4>Comments</h4>
+      <mat-list>
+        <mat-list-item *ngFor="let comment of course.comments">
+          {{ comment.comment }} ({{ comment.date }})
+        </mat-list-item>
+      </mat-list>
+      <!-- Add comment form -->
+      <form
+        #commentForm="ngForm"
+        (ngSubmit)="addComment(course.id, currentUserId, commentInput.value, today)"
+      >
+        <mat-form-field>
+          <mat-label>Comment</mat-label>
+          <input matInput #commentInput required />
+        </mat-form-field>
+        <button mat-raised-button type="submit">Add Comment</button>
+      </form>
+      <!-- Add review form similarly -->
+    </mat-card-content>
+  </mat-card>
+</div>

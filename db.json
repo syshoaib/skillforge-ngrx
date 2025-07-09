@@ -1,0 +1,266 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "email": "alice@example.com",
+      "enrolledCourseIds": [
+        {
+          "courseId": "c1",
+          "progress": {
+            "completedModules": 4,
+            "totalModules": 10
+          }
+        },
+        {
+          "courseId": "c2",
+          "progress": {
+            "completedModules": 7,
+            "totalModules": 12
+          }
+        },
+        {
+          "courseId": "c4",
+          "progress": {
+            "completedModules": 5,
+            "totalModules": 10
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "courseId": "c1",
+          "review": "Great course!",
+          "rating": 5
+        },
+        {
+          "courseId": "c2",
+          "review": "Challenging but rewarding.",
+          "rating": 4
+        },
+        {
+          "courseId": "c3",
+          "review": "testing",
+          "rating": 2
+        },
+        {
+          "courseId": "c4",
+          "review": "nice course",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "email": "bob@example.com",
+      "enrolledCourseIds": [
+        {
+          "courseId": "c1",
+          "progress": {
+            "completedModules": 10,
+            "totalModules": 10
+          }
+        },
+        {
+          "courseId": "c3",
+          "progress": {
+            "completedModules": 1,
+            "totalModules": 8
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "courseId": "c1",
+          "review": "Finished it, learned a lot!",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "email": "carol@example.com",
+      "enrolledCourseIds": [
+        {
+          "courseId": "c2",
+          "progress": {
+            "completedModules": 3,
+            "totalModules": 12
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "courseId": "c2",
+          "review": "Good explanations.",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "email": "dan@example.com",
+      "enrolledCourseIds": [
+        {
+          "courseId": "c3",
+          "progress": {
+            "completedModules": 6,
+            "totalModules": 8
+          }
+        }
+      ],
+      "reviews": [
+        {
+          "courseId": "c3",
+          "review": "Very practical content.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "email": "eve@example.com",
+      "enrolledCourseIds": [],
+      "reviews": []
+    }
+  ],
+  "courses": [
+    {
+      "id": "c1",
+      "title": "Angular Fundamentals",
+      "author": "Jane Doe",
+      "enrolledUserIds": [
+        "u1",
+        "u2"
+      ],
+      "reviews": [
+        {
+          "userId": "u1",
+          "review": "Great course!",
+          "rating": 5
+        },
+        {
+          "userId": "u2",
+          "review": "Finished it, learned a lot!",
+          "rating": 5
+        }
+      ],
+      "comments": [
+        {
+          "userId": "u1",
+          "comment": "Loved the RxJS section!",
+          "date": "2024-06-01"
+        },
+        {
+          "userId": "u2",
+          "comment": "Templates are well explained.",
+          "date": "2024-06-02"
+        },
+        {
+          "userId": "u1",
+          "comment": "testing",
+          "date": "2025-07-04"
+        }
+      ],
+      "rating": 5,
+      "totalEnrolled": 2,
+      "totalHours": 8
+    },
+    {
+      "id": "c2",
+      "title": "NgRx in Depth",
+      "author": "John Smith",
+      "enrolledUserIds": [
+        "u1",
+        "u3"
+      ],
+      "reviews": [
+        {
+          "userId": "u1",
+          "review": "Challenging but rewarding.",
+          "rating": 4
+        },
+        {
+          "userId": "u3",
+          "review": "Good explanations.",
+          "rating": 4
+        }
+      ],
+      "comments": [
+        {
+          "userId": "u3",
+          "comment": "Selectors are tricky but useful.",
+          "date": "2024-06-03"
+        },
+        {
+          "userId": "u1",
+          "comment": "commenting in ngrx ",
+          "date": "2025-07-04"
+        },
+        {
+          "userId": "u1",
+          "comment": "new comment",
+          "date": "2025-07-04"
+        }
+      ],
+      "rating": 4,
+      "totalEnrolled": 2,
+      "totalHours": 12
+    },
+    {
+      "id": "c3",
+      "title": "TypeScript Essentials",
+      "author": "Emily Clark",
+      "enrolledUserIds": [
+        "u2",
+        "u4"
+      ],
+      "reviews": [
+        {
+          "userId": "u4",
+          "review": "Very practical content.",
+          "rating": 5
+        },
+        {
+          "userId": "u1",
+          "review": "testing",
+          "rating": 2
+        }
+      ],
+      "comments": [
+        {
+          "userId": "u4",
+          "comment": "Loved the generics part!",
+          "date": "2024-06-04"
+        }
+      ],
+      "rating": 3.5,
+      "totalEnrolled": 2,
+      "totalHours": 8
+    },
+    {
+      "id": "c4",
+      "title": "RxJS Mastery",
+      "author": "Liam Brown",
+      "enrolledUserIds": [
+        "u1"
+      ],
+      "reviews": [
+        {
+          "userId": "u1",
+          "review": "nice course",
+          "rating": 4
+        }
+      ],
+      "comments": [
+        {
+          "userId": "u1",
+          "comment": "test",
+          "date": "2025-07-04"
+        }
+      ],
+      "rating": 4,
+      "totalEnrolled": 1,
+      "totalHours": 10
+    }
+  ]
+}
